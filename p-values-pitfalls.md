@@ -43,7 +43,8 @@ In fact, p-values by themselves are of limited value. We need another statistica
 The p value is a statement about p(data/H0) when what we are actually after is a statement about p(H0/data).
 
 In Bayesian notations, the two quantities are linked by the ratio p(H0)/p(data):  
-                eq1:*p*(H0/data) = p(H0)/p(data) \* p(data/H0). 
+
+> *eq1:* p(H0/data) = p(H0)/p(data) x p(data/H0). 
 
 The difference between the two can be described as:
 
@@ -211,9 +212,9 @@ This minimum boundary thus plays a key role in illustrating the best case scenar
 
 Let's remember that formulation of Bayes' theorem in terms of update via the **Likelihood ratio**:
 
-eq2:  p(H1/data)/p(H0/data)  = p(data/H1)/p(data/H0) × p(H1)/p(H0)
-
-         posterior odds ratio      = likelihood ratio             × prior odds ratio
+>*eq2:* p(H1/data)/p(H0/data)  = p(data/H1)/p(data/H0) × p(H1)/p(H0)
+>
+>       posterior odds ratio      = likelihood ratio             × prior odds ratio
 
 The likelihood ratio is also be called '**Bayes factor**'.  
 Note that the Bayes Factor is totally independent of any selecting any **subjective** value for p(H0) or p(H1).  
@@ -225,9 +226,9 @@ From this we see that the Bayes Factor (H1 vs H0) becomes  a maximal value of t
 
 Going back to Figure 1 above, one can show that more generally (see section A.2 of [Colquhoun](https://royalsocietypublishing.org/doi/10.1098/rsos.171085) for details):
 
-eq3:    likelihood ratio(H1 vs. H0) = y1 / (2 x y0)
+>*eq3:*    likelihood ratio(H1 vs. H0) = y1 / (2 x y0)
 
-> Illustration using Figure 1:
+**Illustration using Figure 1:**
 >
 > For a p-value of 0.05 with a test power of 0.8:
 >
@@ -249,21 +250,21 @@ Since it is not normally considered acceptable to be optimistic about H1 to the 
 
 Hence
 
-eq4:    posterior odds ratio ≤ likelihood ratio(H1 vs H0)                for p(H1) ≤ 0.5 
+> *eq4:*    posterior odds ratio ≤ likelihood ratio(H1 vs H0)                for p(H1) ≤ 0.5 
 
 From probability = odds/(1+odds), considering p(H0/data) and **supposing that the prior odds ratio (p(H1)/p(H0)) is1**, we get
 
-p(H0/data) = p(H1/data) / likelihood ratio
+>p(H0/data) = p(H1/data) / likelihood ratio
+>
+>p(H0/data) = (1-p(H0/data)) / likelihood ratio
+>
+>*eq5:*    FPR = p(H0/data) = 1/(1 + likelihood ratio)                                        (supposing prior odds ratio = 1)
+>
+>Which can also be written as:
+>
+>*eq6:*    FPR = p(H0/data) = p(data/H0)/ [p(data/H0) + p(data/H1)]              (supposing prior odds ratio = 1)
 
-p(H0/data) = (1-p(H0/data)) / likelihood ratio
-
-eq5:    FPR = p(H0/data) = 1/(1 + likelihood ratio)                                        (supposing prior odds ratio = 1)
-
-Which can also be written as:
-
-eq6:    FPR = p(H0/data) = p(data/H0)/ [p(data/H0) + p(data/H1)]              (supposing prior odds ratio = 1)
-
-> Illustration using Figure 1:
+**Illustration using Figure 1:**
 >
 > For a p-value of 0.05 with a test power of 0.8:
 >
@@ -284,11 +285,11 @@ Practically in Data Science when working on marginal relations with weak data, o
 
 If we do not ignore p(H1)/p(H0) the eq6 just simply becomes:
 
-eq7:    p(H0/data) = p(H0) x p(data/H0)/ (p(H0) x p(data/H0) + p(H1) x p(data/H1))
+>*eq7:*    p(H0/data) = p(H0) x p(data/H0)/ (p(H0) x p(data/H0) + p(H1) x p(data/H1))
 
 or
 
-eq8:     p(H0/data) = p(data/H0)/ (p(data/H0) + [p(H1)/P(H0)] x p(data/H1))
+>*eq8:*     p(H0/data) = p(data/H0)/ (p(data/H0) + [p(H1)/P(H0)] x p(data/H1))
 
 As the prior odds ratio p(H1)/p(H0) should never be > 1 in a discovery setup, and in most situation much lower than 1, we can see that practically:
 
@@ -321,7 +322,7 @@ This [link](http://fpr-calc.ucl.ac.uk/) provides a calculator for the FPR. Pleas
 For a p-value of 0.05 and a well-powered sample size (n=16, power=0.78), the FPR is:
 
 - 76% if one supposes p(H1) = 0.1 (adversarial)      (→ in this case we have an exact FPR)
-- 26**%** if one supposes p(H1) = 0.5 (neutral)            (→ in this case we have the minimum FPR over the reasonable range for P(H0), i.e. p(H0) ≥ 0.5)
+- 26% if one supposes p(H1) = 0.5 (neutral)          (→ in this case we have the minimum FPR over the reasonable range for P(H0), i.e. p(H0) ≥ 0.5)
 
 note: 26% in the best situation is much higher than the often wrongly interpreted 5%. Basically there is no sound basis to reject H0 at that level of p-value.
 
@@ -335,7 +336,7 @@ This is a very small p-value.
 For a p-value of 0.005 and a well-powered sample size (n=16, power=0.78), the minimum FPR is:
 
 - 24% if one supposes p(H1) = 0.1 (adversarial)
-- 3.4**%** if one supposes p(H1) = 0.5 (neutral)
+- 3.4% if one supposes p(H1) = 0.5 (neutral)
 
 note: 3.4% is good but this grows to minimum 24% if P(H1) is 0.1 instead. Hence it is still a rather marginal level of confidence in the adversarial case.
 
@@ -347,11 +348,11 @@ For a p-value of 0.001 and a well-powered sample size (n=16, power=0.78), the mi
 
 Note: this is still high if p(H1) = 0.1 but start getting acceptable. One would actually need p=0.00045 to bring the minimum FPR to 5%.
 
-> **Take-away**
->
-> **# 1.** A p-value of around 0.001 and not 0.05 is compatible with a probability of 5% for a false positive (seeing a size effect where there is none) within a reasonable range for p(H1) and a common standard test power of 0.8. 
->
-> **# 2.** If p-value are to be used, some authors have recommended that - as a lesser evil - at the very least the 'significant' criteria should be moved down to 0.005, while still understanding all the limitations of NHST.
+**Take-away:**
+
+**1.** A p-value of around 0.001 and not 0.05 is compatible with a probability of 5% for a false positive (seeing a size effect where there is none) within a reasonable range for p(H1) and a common standard test power of 0.8. 
+
+**2.** If p-value are to be used, some authors have recommended that - as a lesser evil - at the very least the 'significant' criteria should be moved down to 0.005, while still understanding all the limitations of NHST.
 
 <img src="p-values-images/ffb564b52006f1de.png" alt="False Positive plottted against the prio probability for a test that comes out with a p-value just below 0.05" width="650px"/>
 
@@ -361,7 +362,7 @@ Note: this is still high if p(H1) = 0.1 but start getting acceptable. One would 
 
 With the usual reasonable hypothesis that p(H1) ≤0.5, we can derive an approximation for min(FPR) using the approximation for the Bayes Factor given in 1.5.b.
 
-**FPR ≥ 1/[1 - 1/(e p ln(p))]                          (p(H1) ≤0.5)**
+> **FPR ≥ 1/[1 - 1/(e p ln(p))]                          (p(H1) ≤0.5)**
 
 The steepness of the [FPR curve](https://www.desmos.com/calculator/t6kjhyzqhf) (given for for p(H1 = 0.5) is striking and perfectly illustrate why the p-value is an unreliable guide.
 
@@ -400,25 +401,25 @@ Fortunately, there is a single, simple formula that one can apply to convert a p
 
 For example, if the data produces a *p*-value of 0.07 (sometimes termed a ‘trend’), the Bayes factor upper bound is 1.98 and one can conclude that the alternative hypothesis is at most twice as likely as the null hypothesis (FPR ≥ 0.33).
 
-> **Bayes factor upper bound ≤ –1 / [e x p x ln(p)]**
->
-> A calculator for the Bayes factor is available [here](https://harry-tattan-birch.shinyapps.io/bayes-factor-calculator/). 
+> **Bayes  factor  upper  bound  ≤ –1 / [e x p x ln(p)]**
+
+ A calculator for the Bayes factor is available [here](https://harry-tattan-birch.shinyapps.io/bayes-factor-calculator/). 
 
 Here is another calculation example for a p-value of 0.05:
 
-Bayes Factor ≤ ~ -1 / (2.718 x 0.05 x ln(0.05))
-
-**Bayes Factor ≤ 2.46**
+> Bayes Factor ≤ ~ -1 / (2.718 x 0.05 x ln(0.05))
+> 
+> **Bayes Factor ≤ 2.46**
 
 And to show the link to the FPR:
 
-P(H1/data) / P(H0/data) ≤ 2.46
-
-(1-  P(H0/data)) / P(H0/data) ≤ 2.46
-
-P(H0/data) ≥ 1/(1+2.46)
-
-**FPR ≥ 0.289**
+> P(H1/data) / P(H0/data) ≤ 2.46
+>
+> (1-  P(H0/data)) / P(H0/data) ≤ 2.46
+>
+>P(H0/data) ≥ 1/(1+2.46)
+>
+>**FPR ≥ 0.289**
 
 # 2   P-hacking
 
