@@ -1,7 +1,7 @@
 # Research Notes: P-values and other significance pitfalls
-A rigorous guide to p-value misinterpretation, False Positive Risk, p-hacking, structural bias, and Bayesian alternatives.
+A rigorous guide to p-value misinterpretation, False Positive Risk, p-hacking, structural bias, and Bayesian alternatives. Heavy on the maths, but useful to have the foundations in one place.
 
-Research notes by Gilles Demaneuf. Heavy on the maths, but useful to have the foundations in one place.
+Research notes by Gilles Demaneuf. [`Git Page`](https://nemonominem.github.io/P-Values_Pitfalls/p-values-pitfalls.html), [`Git repo`](https://github.com/nemonominem/P-Values_Pitfalls) 
 
 > # TLD'R
 >
@@ -490,13 +490,13 @@ If the maths above do your head in, that book is nothing like that and adds an e
 
 **Key papers referenced in this document:**
 
-- [`TOP_rsos.171085.pdf`](articles/TOP_rsos.171085.pdf) — Very good review of FPR
-- [`VTOP_dickson_p-values_november_15_2018_rt.pdf`](articles/VTOP_dickson_p-values_november_15_2018_rt.pdf) — Nice presentation on p-values limitations
-- [`TOP_rsbl.2019.0174.pdf`](articles/TOP_rsbl.2019.0174.pdf) — p-value is over: alternative analyses
-- [`TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf`](articles/TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf) — Good for section 3 on solutions for reproducible research
-- [`TOP_10654_2016_Article_149.pdf`](articles/TOP_10654_2016_Article_149.pdf) — 25 misinterpretations of P values, confidence intervals, and power
-- [`TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf`](articles/TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf) — Good for Bayes factor
-- [`TOP_RedefineStatisticalSignificance.pdf`](articles/TOP_RedefineStatisticalSignificance.pdf) — Nature proposal for a 0.005 threshold
-- [`TOP_CummingPerspPsychSci2008.pdf`](articles/TOP_CummingPerspPsychSci2008.pdf) — Good on prediction intervals and reproducibility
-- [`VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf`](articles/VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf) — Excellent introduction by Goodman, part 1
-- [`VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf`](articles/VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf) — Excellent introduction by Goodman, part 2
+- [`TOP_rsos.171085.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_rsos.171085.pdf) — Very good review of FPR
+- [`VTOP_dickson_p-values_november_15_2018_rt.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/VTOP_dickson_p-values_november_15_2018_rt.pdf) — Nice presentation on p-values limitations
+- [`TOP_rsbl.2019.0174.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_rsbl.2019.0174.pdf) — p-value is over: alternative analyses
+- [`TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf) — Good for section 3 on solutions for reproducible research
+- [`TOP_10654_2016_Article_149.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_10654_2016_Article_149.pdf) — 25 misinterpretations of P values, confidence intervals, and power
+- [`TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf) — Good for Bayes factor
+- [`TOP_RedefineStatisticalSignificance.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_RedefineStatisticalSignificance.pdf) — Nature proposal for a 0.005 threshold
+- [`TOP_CummingPerspPsychSci2008.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/TOP_CummingPerspPsychSci2008.pdf) — Good on prediction intervals and reproducibility
+- [`VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf) — Excellent introduction by Goodman, part 1
+- [`VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf`](https://nemonominem.github.io/P-Values_Pitfalls/articles/VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf) — Excellent introduction by Goodman, part 2
