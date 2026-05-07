@@ -4,7 +4,7 @@ description: "A rigorous guide to p-value misinterpretation, False Positive Risk
 tags: [statistics, p-values, bayesian, hypothesis-testing, reproducibility]
 ---
 
-# P-values and other significance pitfalls
+# Research N: P-values and other significance pitfalls
 
 > # Summary
 >
@@ -80,7 +80,7 @@ This deductive representation of the issue is [illustrated below](https://royals
 There one can see that p(data/H0) does not mean that H1 is much less likely than H0 given a high value for p(data/H0).   
 With a low power test, under H1 the probability that the test value t (using a Student test for small populations) is under the critical level (2.04) is still relatively high at 22%, against 95% for H0.
 
-![](p-values-images/d881211a6efdcaca.png)
+<img src="p-values-images/d881211a6efdcaca.png" alt="Definitions for a NHST" width="700px"/>
 
 ### b. The chance of a false reported effect is often very high:
 
@@ -88,7 +88,7 @@ In section 1.4 we shall introduce the False Positive Risk (FPR), also called Fal
 
 A popular Nature article made that point through a simple illustration reproduced here:
 
-![](p-values-images/2512f102991e244b.png)
+<img src="p-values-images/2512f102991e244b.png" alt="False Positive Risk - Illustration" width="950px"/>
 
 As we can see, at the very neutral a-priori P(H1) = P(H0) = 0.5 level (a realistic best case for any new discovery setup), the False Positive Risk is at least:
 
@@ -138,11 +138,9 @@ If, instead, the initial finding is P = 0.001, the 95% [pi] interval is [0.00000
 
 In fact, an initial finding of P < 0.00001 is needed to have 95% confidence that a same-sized replication study will have 80% power; P < 0.0003 is needed if the replication study is twice the size of the original study (Fig. 1 below). Furthermore, trying to replicate an initial test result of P = 0.05 with the same sample size gives 50% confidence of having 50% power to detect an effect in the same direction, but a sample 79 times that size is needed to ensure 95% confidence of having 80% power.
 
-![](p-values-images/power-interval-figure.png)
+<img src="p-values-images/power-interval-figure.png" alt="Confidence limits for power based on observed p-value" width="560px"/>
 
-Confidence limits for power based on observed p-value. Estimated de factor power (solid blue curve) and 80% confidence limits (dashed blue curves)  
-for study 2 with sample size N2 based on an observed p-value from study 1 with sample size N1.  
-Assumes a two-sided test at significance level α = 0.05. Dashed red vertical line is at p-value = 0.05, and solid gray horizontal lines at 80% and 90% power.
+*Confidence limits for power based on observed p-value. Estimated de factor power (solid blue curve) and 80% confidence limits (dashed blue curves) for study 2 with sample size N2 based on an observed p-value from study 1 with sample size N1. Assumes a two-sided test at significance level α = 0.05. Dashed red vertical line is at p-value = 0.05, and solid gray horizontal lines at 80% and 90% power.*
 
 ## 1.4 Recommended complement to p-value - the False Positive Risk:
 
@@ -316,9 +314,9 @@ Hence the value of FPR given by eq6 acts as a minimum boundary for the exact val
 
 ### d. Practical examples:
 
-This **[link](http://fpr-calc.ucl.ac.uk/)**provides a calculator for the FPR. Please use it.
+This [link](http://fpr-calc.ucl.ac.uk/) provides a calculator for the FPR. Please use it.
 
-**![](p-values-images/ae417f19b21936bd.png)**
+<img src="p-values-images/ae417f19b21936bd.png" alt="False Positive Calculations" width="700px"/>
 
 For a p-value of 0.05 and a well-powered sample size (n=16, power=0.78), the FPR is:
 
@@ -355,9 +353,9 @@ Note: this is still high if p(H1) = 0.1 but start getting acceptable. One would 
 >
 > **# 2.** If p-value are to be used, some authors have recommended that - as a lesser evil - at the very least the 'significant' criteria should be moved down to 0.005, while still understanding all the limitations of NHST.
 
-**![](p-values-images/ffb564b52006f1de.png)**
+<img src="p-values-images/ffb564b52006f1de.png" alt="False Positive plottted against the prio probability for a test that comes out with a p-value just below 0.05" width="650px"/>
 
-(note: typically one does not consider p(H1) > 0.5 out of necessary conservatism, hence the red part of the curve above)
+*(note: typically one does not consider p(H1) > 0.5 out of necessary conservatism, hence the red part of the curve above)*
 
 ### e. Approximation of minimal FPR value through the likelihood (Bayes Factor):
 
@@ -367,14 +365,12 @@ With the usual reasonable hypothesis that p(H1) ≤0.5, we can derive an approxi
 
 The steepness of the [FPR curve](https://www.desmos.com/calculator/t6kjhyzqhf) (given for for p(H1 = 0.5) is striking and perfectly illustrate why the p-value is an unreliable guide.
 
-**![](p-values-images/0220062867c019b9.png)**
+<img src="p-values-images/0220062867c019b9.png" alt="pproximation of FPR minimal value as a function of p-value (calculated at P(H1) = 0.5)" width="600px"/>
 
 *Approximation of FPR minimal value as a function of **p-value** (calculated at P(H1) = 0.5)*
 
 This approximation is slightly above the values given in 1.4.d above, which are based on the more precise [David Colquhoun's approach](https://royalsocietypublishing.org/doi/10.1098/rsos.171085).  
 However the approximation is rather simple. It is developed also in [Selke et al](https://www.jstor.org/stable/2685531), which was the basis of an oft reproduced illustration in a [Nature article](https://www.nature.com/articles/506150a) we saw earlier.
-
-![](p-values-images/2512f102991e244b.png)
 
 ## 1.5 Alternative complements to p-value
 
@@ -398,7 +394,7 @@ This criticism of Bayesian statistics is often exaggerated because the influence
 
 Fortunately, there is a single, simple formula that one can apply to convert a p-value to a form of the Bayes factor without any other information. This simplified form, termed the **Bayes factor upper bound**, states the most likely it is that the alternative hypothesis is true rather than the null hypothesis over any reasonable prior distribution.
 
-![](p-values-images/924031d536c4e43b.png)
+<img src="p-values-images/924031d536c4e43b.png" alt="Definitions for a NHST" width="900px"/>
 
 *Lee and Wagenmakers’ classification scheme for interpreting Bayes factors (BF10, odds of H1 to H0)*
 
@@ -434,7 +430,7 @@ This actually is largely true for any testing process:
 This is one form of the so-called [Texas sharpshooter](https://www.nature.com/articles/526182a) problem, whereby one unknowingly develops a pseudo-scientific narrative around a random result by ignoring the decisions that resulted in the selection of that specific result.  
 This is extremely easily done by not recording these decisions and previous attempts, including previous usage of the supposedly unseen data along the way to this circling around a specific experiment.
 
-![TexasSharpShooter](p-values-images/TexasSharpShooter.png)
+<img src="p-values-images/TexasSharpShooter.png" alt="TexasSharpShooter" width="300px"/>
 
 Also a simple serial attempt at significance tests for various population statistics will eventually bring a false positive, if enough attempts are performed.  
 This is not any different than saying that the max of n normal(0, 1) samples is not 0, and the higher n then the deeper that max moves within the right tail of the normal distribution. The max is a simple form of selection, and any form of selection biases the measured value (the max here) away from the true mean (zero in this case).
@@ -453,13 +449,14 @@ Another necessary condition typically applicable to most significance statistica
 
 **The experiment is unbiased,** so that the underlying comparison of some population statistic between different subgroups make sense.
 
-![](p-values-images/CERN-HOMEWEB-PHO-2019-143-12.png)  
 A good illustration of model bias was [provided by James Berger](https://cbms-mum.soe.ucsc.edu/lecture1.pdf) in the following slide where we can see how confidence intervals shifted over time as model bias was slowly resolved, in such a way that the model bias shifts actually contradict the confidence intervals.
 
-![](p-values-images/368cfea17e4ea04e.png)
+<img src="p-values-images/368cfea17e4ea04e.png" alt="James Berger on Experimental Biases" width="800px"/>
 
 Structural modelling issues may create biases but may be very difficult to detect unless one uses at least **two independent experiments**.  
 The 'two independent experiments' approach is actually a standard approach in particular physics, with for instance two different detectors required to validate key results at the CERN (typically ATLAS and CMS, [two multipurpose detectors run by two different teams](https://home.cern/science/physics/12-steps-idea-discovery) so as to ensure true independence).
+
+<img src="p-values-images/CERN-HOMEWEB-PHO-2019-143-12.png" alt="CERN: CMS vs. ATLAS" width="600px"/>
 
 A version of the two-experiment approach is also the basis of [some US Food and Drug Administration recommendation](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-019-0865-y) regarding the usage of p-values.   
   
@@ -477,7 +474,8 @@ Of particular relevance here are **possible structural data cleaning/filtering i
 Are instead biases introduced instead? If so may these biases additionally differ across the different populations considered for comparison?
 
 A good introduction to a more comprehensive overview of the problem was published [in a Nature article](https://www.nature.com/articles/520612a) which is worth reading.  
-![](p-values-images/008f09697e478aa2.png)
+
+<img src="p-values-images/008f09697e478aa2.png" alt="Data Pipeline" width="250px"/>
 
 Similarly some authors (see Greenland et al referenced below) also insist on the many assumptions that may lurk behind a p-value, including data dredging by ignoring intermediate failed directions and experiments:
 
@@ -489,17 +487,18 @@ Similarly some authors (see Greenland et al referenced below) also insist on the
 
 ## References:
 
-A very good accessible book about the debacle of the p-Value and, more generally, of Frequentist probabilities, is Aubrey Clayton's [Bernoulli's Fallacy](https://aubreyclayton.com/bernoulli). If the maths above do your head in, that book is nothing like that and adds an excellent g… *(sentence cut off in source)*
+A very good accessible book about the debacle of the p-Value and, more generally, of Frequentist probabilities, is Aubrey Clayton's [Bernoulli's Fallacy](https://aubreyclayton.com/bernoulli).
+If the maths above do your head in, that book is nothing like that and adds an excellent g… *(sentence cut off in source)*
 
-**Key papers (attached in source document):**
+**Key papers referenced in this document:**
 
-- **TOP_rsos.171085.pdf** — Very good review of FPR
-- **VTOP_dickson_p-values_november_15_2018_rt.pdf** — Nice presentation on p-values limitations
-- **TOP_rsbl.2019.0174.pdf** — p-value is over: alternative analyses
-- **TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf** — Good for section 3 on solutions for reproducible research
-- **TOP_10654_2016_Article_149.pdf** — 25 misinterpretations of P values, confidence intervals, and power
-- **TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf** — Good for Bayes factor
-- **TOP_RedefineStatisticalSignificance.pdf** — Nature proposal for a 0.005 threshold
-- **TOP_CummingPerspPsychSci2008.pdf** — Good on prediction intervals and reproducibility
-- **VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf** — Excellent introduction by Goodman, part 1
-- **VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf** — Excellent introduction by Goodman, part 2
+- [`TOP_rsos.171085.pdf`](articles/TOP_rsos.171085.pdf) — Very good review of FPR
+- [`VTOP_dickson_p-values_november_15_2018_rt.pdf`](articles/VTOP_dickson_p-values_november_15_2018_rt.pdf) — Nice presentation on p-values limitations
+- [`TOP_rsbl.2019.0174.pdf`](articles/TOP_rsbl.2019.0174.pdf) — p-value is over: alternative analyses
+- [`TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf`](articles/TOP_bdc0702160fd16293b45673ae8c1d5503e9b.pdf) — Good for section 3 on solutions for reproducible research
+- [`TOP_10654_2016_Article_149.pdf`](articles/TOP_10654_2016_Article_149.pdf) — 25 misinterpretations of P values, confidence intervals, and power
+- [`TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf`](articles/TOP_Of_P_Values_and_Bayes__A_Modest_Proposal.6.pdf) — Good for Bayes factor
+- [`TOP_RedefineStatisticalSignificance.pdf`](articles/TOP_RedefineStatisticalSignificance.pdf) — Nature proposal for a 0.005 threshold
+- [`TOP_CummingPerspPsychSci2008.pdf`](articles/TOP_CummingPerspPsychSci2008.pdf) — Good on prediction intervals and reproducibility
+- [`VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf`](articles/VTOP_TowardEvidenceBasedMedicalStatistics_P1.pdf) — Excellent introduction by Goodman, part 1
+- [`VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf`](articles/VTOP_TowardEvidenceBasedMedicalStatistics_P2.pdf) — Excellent introduction by Goodman, part 2
