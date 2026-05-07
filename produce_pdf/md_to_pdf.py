@@ -382,7 +382,7 @@ def md_to_html(md_path: Path) -> str:
 
     body_html = re.sub(r'\[\^([^\]]+)\]', replace_raw_fnref, body_html)
 
-    # Convert width="X%" HTML attributes to inline style so CSS max-width:100%
+    # Convert width="X%" or width="Xpx" HTML attributes to inline style so CSS max-width:100%
     # doesn't override them.  WeasyPrint honours inline style over stylesheet rules.
     def apply_width_attr(html: str) -> str:
         def rewrite(m: re.Match) -> str:
@@ -391,10 +391,11 @@ def md_to_html(md_path: Path) -> str:
             # Remove the width= attribute and inject as inline style instead
             tag = re.sub(r'\s*width="[^"]*"', '', tag)
             # Insert style before the closing > or />
+            # Use min() to cap px widths to 100% of reading area, preserving % widths as-is
             tag = re.sub(r'\s*/?>$',
-                         f' style="max-width:{w};width:{w};">', tag)
+                         f' style="max-width:min({w}, 100%);width:min({w}, 100%);">', tag)
             return tag
-        return re.sub(r'<img\b[^>]*\bwidth="(\d+%)"[^>]*/?>',
+        return re.sub(r'<img\b[^>]*\bwidth="([\d.]+(?:px|%))"[^>]*/?>',
                       rewrite, html)
     body_html = apply_width_attr(body_html)
 

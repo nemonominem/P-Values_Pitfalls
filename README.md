@@ -6,8 +6,9 @@ This repository contains notes and reference material for an article on p-values
 
 - [`p-values-pitfalls.md`](p-values-pitfalls.md) — main markdown article draft.
 - [`articles/`](articles) — reference PDFs cited by the article.
-- [`p-values-images/`](p-value-images) — local image assets used in the markdown ()
+- [`p-values-images/`](p-value-images) — local image assets used in the markdown.
 - [`reviews/`](reviews) — review notes and fact-check results.
+- [`produce_pdf/`](produce_pdf) — PDF generation pipeline using WeasyPrint.
 
 ## Notes
 
