@@ -3,7 +3,7 @@ A rigorous guide to p-value misinterpretation, False Positive Risk, p-hacking, s
 
 Research notes by Gilles Demaneuf. [`Git Page`](https://nemonominem.github.io/P-Values_Pitfalls/p-values-pitfalls.html), [`Git repo`](https://github.com/nemonominem/P-Values_Pitfalls) 
 
-> # TLD'R
+> # TL;DR
 >
 > P-values used in null hypothesis significance testing (NHST) can be extremely misleading. Not only have these p-values by themselves some strong theoretical and practical limitations (discussed in 1.2 below), but, to make things worse, the interpretation of p-values itself is very often wrong, as will be shown in 1.1.
 >
