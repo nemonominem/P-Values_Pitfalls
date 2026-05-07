@@ -1,0 +1,10 @@
+_OldStuff/
+.DS_Store
+**/.DS_Store
+.tmp/
+.tmp_*
+**/__pycache__
+
+# Grounding requests and imports are local workflow files, not committed.
+sources/_grounding/
+sources/_import/
