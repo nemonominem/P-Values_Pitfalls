@@ -1,12 +1,9 @@
----
-title: "P-values and other significance pitfalls"
-description: "A rigorous guide to p-value misinterpretation, False Positive Risk, p-hacking, structural bias, and Bayesian alternatives."
-tags: [statistics, p-values, bayesian, hypothesis-testing, reproducibility]
----
+# Research Notes: P-values and other significance pitfalls
+A rigorous guide to p-value misinterpretation, False Positive Risk, p-hacking, structural bias, and Bayesian alternatives.
 
-# Research N: P-values and other significance pitfalls
+Research notes by Gilles Demaneuf. Heavy on the maths, but useful to have the foundations in one place.
 
-> # Summary
+> # TLD'R
 >
 > P-values used in null hypothesis significance testing (NHST) can be extremely misleading. Not only have these p-values by themselves some strong theoretical and practical limitations (discussed in 1.2 below), but, to make things worse, the interpretation of p-values itself is very often wrong, as will be shown in 1.1.
 >
@@ -188,7 +185,7 @@ Effectively the p-value itself is only the first step in a 2-step statistical pr
 >
 > BOTH values need to be consistent with a significant result (at their respective level of comfort) for the single experiment to be significant.  
 >   
-> Note: For (2) 0.5 is a fairly neutral value but use some common sense to decide if a larger value is warranted.
+> note: For (2) 0.5 is a fairly neutral value but use some common sense to decide if a larger value is warranted.
 
 ### b. False Positive Risk and test power:
 
@@ -346,9 +343,9 @@ For a p-value of 0.001 and a well-powered sample size (n=16, power=0.78), the mi
 
 - 8% if one supposes p(H1) = 0.1
 
-Note: this is still high if p(H1) = 0.1 but start getting acceptable. One would actually need p=0.00045 to bring the minimum FPR to 5%.
+note: this is still high if p(H1) = 0.1 but start getting acceptable. One would actually need p=0.00045 to bring the minimum FPR to 5%.
 
-**Take-away:**
+## Take-away:
 
 **1.** A p-value of around 0.001 and not 0.05 is compatible with a probability of 5% for a false positive (seeing a size effect where there is none) within a reasonable range for p(H1) and a common standard test power of 0.8. 
 
@@ -476,7 +473,7 @@ Are instead biases introduced instead? If so may these biases additionally diffe
 
 A good introduction to a more comprehensive overview of the problem was published [in a Nature article](https://www.nature.com/articles/520612a) which is worth reading.  
 
-<img src="p-values-images/008f09697e478aa2.png" alt="Data Pipeline" width="250px"/>
+<img src="p-values-images/008f09697e478aa2.png" alt="Data Pipeline" width="300px"/>
 
 Similarly some authors (see Greenland et al referenced below) also insist on the many assumptions that may lurk behind a p-value, including data dredging by ignoring intermediate failed directions and experiments:
 
